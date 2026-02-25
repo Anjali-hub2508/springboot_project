@@ -50,7 +50,13 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Lombok for reducing boilerplate -->
+        <!--  Spring Boot Security Starter-->
+       <dependency>
+           <groupId>org.springframework.boot</groupId>
+           <artifactId>spring-boot-starter-security</artifactId>
+       </dependency>
+
+       <!-- Lombok for reducing boilerplate -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

@@ -1,8 +1,11 @@
 package org.example.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
 import org.example.entity.Book;
 import org.example.service.BookService;
+import org.springdoc.core.properties.SwaggerUiConfigProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.domain.Page;
@@ -11,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,6 +27,12 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
+
+    // Endpoint to retrieve CSRF token for testing purposes
+    @GetMapping("/csrf")
+    public CsrfToken csrfToken(HttpServletRequest request){
+        return (CsrfToken) request.getAttribute(CsrfToken.class.getName());
+    }
 
     /**
      * GET /books - List all books using pagination
