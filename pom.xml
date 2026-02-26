@@ -29,6 +29,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Spring Boot OAuth2 Client Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+        </dependency>
+
         <!-- Springdoc OpenAPI for Swagger UI (Spring Boot 3.x) -->
         <dependency>
             <groupId>org.springdoc</groupId>

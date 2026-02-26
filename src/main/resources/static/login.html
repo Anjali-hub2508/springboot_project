@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: Arial, sans-serif;
+        }
+
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .login-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #4285F4;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .login-btn:hover {
+            background: #357ae8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>📚 Book Management System</h2>
+    <p>Please login to continue</p>
+
+    <a href="/oauth2/authorization/google" class="login-btn">
+        🔐 Login with Google
+    </a>
+</div>
+
+</body>
+</html>
