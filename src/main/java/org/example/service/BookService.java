@@ -42,7 +42,7 @@ public class BookService {
     }
 
     /**
-     * Update an existing book
+     * Update  existing book
      */
     public Book updateBook(Long id, Book book) {
         if (bookRepository.existsById(id)) {
